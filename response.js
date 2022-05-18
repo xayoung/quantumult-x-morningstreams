@@ -11,9 +11,9 @@
 // $response.statusCode, $response.headers
 
 var modifiedHeaders = $response.headers;
-modifiedHeaders['*'] = 'Access-Control-Allow-Origin';
-modifiedHeaders['true'] = 'Access-Control-Allow-Credentials';
-modifiedHeaders['GET, PUT, POST, DELETE, HEAD, OPTIONS'] = 'Access-Control-Allow-Methods';
+modifiedHeaders['Access-Control-Allow-Origin'] = '*';
+modifiedHeaders['Access-Control-Allow-Credentials'] = 'true';
+modifiedHeaders['Access-Control-Allow-Methods'] = 'GET, PUT, POST, DELETE, HEAD, OPTIONS';
 $done({headers : modifiedHeaders});
 
 // $done({headers : modifiedHeaders});
