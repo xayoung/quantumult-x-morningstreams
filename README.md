@@ -9,6 +9,8 @@ Here's scripts for morningstreams.
 5. Find the 'Mitm', hit the switch, Tap 'Add Hostname' button, enter `*.formula1.com`. Tap 'Generate CA' button. Tap 'Instanll CA' button, trust CA....balabala.
 6. Back to Main, select your proxy, hit the top right switch, Enjoy!
 
+### Rewrite records
+
 >Type: `script-request-header`
 >
 >URL to Match(RegEx): `https://f1tv.formula1.com/`
