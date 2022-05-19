@@ -11,7 +11,7 @@
 // $response.statusCode, $response.headers
 
 var modifiedHeaders = $response.headers;
-var cookie = modifiedHeaders.Cookie;
+var cookie = modifiedHeaders['Set-Cookie'];
 $prefs.setValueForKey(cookie, "f1msck");
 modifiedHeaders['Access-Control-Allow-Origin'] = '*';
 modifiedHeaders['Access-Control-Allow-Credentials'] = 'true';
