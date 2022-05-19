@@ -11,11 +11,8 @@
 // $response.statusCode, $response.headers
 
 var modifiedHeaders = $response.headers;
-var cookie = $prefs.valueForKey("f1msck");
-const isHaveCookie = typeof cookie != "undefined";
-if (isHaveCookie) {
-  modifiedHeaders['Set-Cookie'] = cookie.split(';')[0];
-}
+var cookie = modifiedHeaders['Set-Cookie'];
+$prefs.setValueForKey(cookie, "f1msck");
 modifiedHeaders['Access-Control-Allow-Origin'] = '*';
 modifiedHeaders['Access-Control-Allow-Credentials'] = 'true';
 modifiedHeaders['Access-Control-Allow-Methods'] = 'GET, PUT, POST, DELETE, HEAD, OPTIONS';
