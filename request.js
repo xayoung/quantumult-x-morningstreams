@@ -1,7 +1,7 @@
 var modifiedHeaders = $request.headers;
 $prefs.setValueForKey('undefined', "f1msck");
-var path = $request.path
-modifiedHeaders['rpath'] = path;
+var scheme = $request.scheme
+modifiedHeaders['rscheme'] = scheme;
 modifiedHeaders['Cookie'] = 'undefined=true';
 modifiedHeaders['Origin'] = 'https://f1tv.formula1.com/';
 modifiedHeaders['Referer'] = 'https://f1tv.formula1.com/detail/1000005114/2022-saudi-arabian-grand-prix?action=play';
